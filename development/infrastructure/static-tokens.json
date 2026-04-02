@@ -1,0 +1,20 @@
+[
+  {
+    "token": "users-static-token",
+    "rate_limit": 5,
+    "expires_at": "2027-12-31T23:59:59Z",
+    "allowed_routes": ["/api/v1/users/*"]
+  },
+  {
+    "token": "products-static-token",
+    "rate_limit": 10,
+    "expires_at": "2027-12-31T23:59:59Z",
+    "allowed_routes": ["/api/v1/products/*"]
+  },
+  {
+    "token": "expired-token",
+    "rate_limit": 100,
+    "expires_at": "2020-01-01T00:00:00Z",
+    "allowed_routes": ["/api/v1/users/*"]
+  }
+]
