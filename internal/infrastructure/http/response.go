@@ -27,6 +27,8 @@ func writeError(w stdhttp.ResponseWriter, r *stdhttp.Request, statusCode int, pr
 	}
 	w.WriteHeader(statusCode)
 	instance := r.URL.Path
+	// The generated ProblemDetails model keeps the runtime error shape aligned
+	// with the RFC 7807 contract declared in the OpenAPI specification.
 	if err := json.NewEncoder(w).Encode(httpgenerated.ProblemDetails{
 		Type:     problemType,
 		Title:    stdhttp.StatusText(statusCode),
