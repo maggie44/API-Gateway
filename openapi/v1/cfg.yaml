@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/oapi-codegen/oapi-codegen/refs/heads/main/configuration-schema.json
+package: gatewayapi
+# Output is overridden by the generator. Is required to avoid linting error.
+output: ""
+compatibility:
+  apply-chi-middleware-first-to-last: true
+output-options:
+  skip-prune: false
+  name-normalizer: ToCamelCaseWithInitialisms
