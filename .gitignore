@@ -1,0 +1,9 @@
+.gocache/
+bin/
+dist/
+coverage.out
+*.test
+*.log
+.DS_Store
+.env.local
+.env.*.local
