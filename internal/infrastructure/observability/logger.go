@@ -1,0 +1,25 @@
+// Package observability provides process-level logging helpers.
+package observability
+
+import (
+	"log/slog"
+	"os"
+	"strings"
+)
+
+// NewLogger builds the process-wide slog logger using the configured level.
+func NewLogger(level string) *slog.Logger {
+	logLevel := slog.LevelInfo
+	switch strings.ToLower(level) {
+	case "debug":
+		logLevel = slog.LevelDebug
+	case "warn":
+		logLevel = slog.LevelWarn
+	case "error":
+		logLevel = slog.LevelError
+	}
+
+	return slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
+		Level: logLevel,
+	}))
+}
