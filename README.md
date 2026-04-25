@@ -2,6 +2,8 @@
 
 This repository contains a Go 1.25 API gateway. It proxies resource-based API requests, validates static bearer tokens stored in Redis as secure hashes, applies per-token rate limiting, exposes health and readiness endpoints outside authentication, and defines its HTTP contract from an OpenAPI specification.
 
+This is a demo project. It is not intended to be an example of a real-world production gateway, and it deliberately omits many operational, security, deployment, and scaling concerns that a production gateway would need. Its purpose is to show a handful of key concepts in a compact, runnable form: request proxying, token validation, route authorization, Redis-backed rate limiting, OpenAPI-driven HTTP contracts, and basic observability.
+
 ## Quick start
 
 The fastest way to run the full demo locally is:
